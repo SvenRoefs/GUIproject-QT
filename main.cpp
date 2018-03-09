@@ -1,25 +1,12 @@
 #include "mainwindow.h"
 #include <QApplication>
-#include <QLabel>
-#include <QHBoxLayout>
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
 
-    QWidget *window = new QWidget();
-    QLabel * label = new QLabel("Test");
-    QLabel * label2 = new QLabel("Meuldijk!");
+    MainWindow *main_window = new MainWindow();
+    main_window->show();
 
-    QHBoxLayout *hbox = new QHBoxLayout();
-    hbox->addWidget(label);
-    hbox->addWidget(label2);
-
-    window->setLayout(hbox);
-    window->show();
-
-    return a.exec();
+    return app.exec();
 }
-
-//MainWindow w;
-//w.show();
