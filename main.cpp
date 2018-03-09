@@ -11,11 +11,11 @@ int main(int argc, char *argv[])
     QLabel * label = new QLabel("Test");
     QLabel * label2 = new QLabel("Meuldijk!");
 
-    QHBoxLayout *hbox = new QHBoxLayout();
-    hbox->addWidget(label);
-    hbox->addWidget(label2);
+    QHBoxLayout *layout = new QHBoxLayout();
+    layout->addWidget(label);
+    layout->addWidget(label2);
 
-    window->setLayout(hbox);
+    window->setLayout(layout);
     window->show();
 
     return a.exec();
