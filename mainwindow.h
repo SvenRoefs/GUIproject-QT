@@ -2,21 +2,27 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-namespace Ui {
-class MainWindow;
-}
+#include <QHBoxLayout>
+#include <QLineEdit>
+#include <QSpinBox>
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+
+private:
+    QWidget *window;
+    QLineEdit *label;
+    QLineEdit *label2;
+    QSpinBox *label3;
+    QHBoxLayout *layout;
 
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
 private:
-    Ui::MainWindow *ui;
+
 };
 
 #endif // MAINWINDOW_H
