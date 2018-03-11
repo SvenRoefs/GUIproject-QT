@@ -25,10 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    generalparameterstab.cpp \
+    atomicparameterstab.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    generalparameterstab.h \
+    atomicparameterstab.h
 
 FORMS += \
         mainwindow.ui
