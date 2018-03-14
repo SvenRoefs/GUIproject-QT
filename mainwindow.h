@@ -29,6 +29,7 @@ private:
     GeneralParametersTab *general_parameters_tab;
     AtomicParametersTab *atomic_parameters_tab;
 
+
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
