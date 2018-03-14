@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QWidget>
+#include <QScrollArea>
 
 class GeneralParametersTab : public QWidget
 {
