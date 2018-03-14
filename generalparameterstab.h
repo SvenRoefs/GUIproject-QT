@@ -8,6 +8,8 @@
 #include <QDoubleSpinBox>
 #include <QVector>
 #include <iostream>
+#include <QLabel>
+#include <QString>
 
 class GeneralParametersTab : public QWidget
 {
@@ -17,9 +19,14 @@ private:
     QVector<QDoubleSpinBox*> MinValue;
     QVector<QDoubleSpinBox*> Value;
     QVector<QDoubleSpinBox*> MaxValue;
+    QList<QLabel*> parameter; // waarom moet die * erachter?
+
+
 public:
     explicit GeneralParametersTab(QWidget *parent = nullptr);
 
+private:
+        void parVector();
 signals:
 
 public slots:

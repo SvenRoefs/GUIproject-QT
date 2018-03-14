@@ -29,13 +29,24 @@ GeneralParametersTab::GeneralParametersTab(QWidget *parent) : QWidget(parent)
     widget->setLayout(gridLayout);
 
     // add Textboxes to the layout
-    for(int i=0; i<39; i++){
+    for(int i=0; i<2; i++){
         this->MinValue.push_back(new QDoubleSpinBox());
         this->Value.push_back(new QDoubleSpinBox());
         this->MaxValue.push_back(new QDoubleSpinBox());
+        this->parameter.push_back(new QLabel());
 
-        gridLayout->addWidget(MinValue[i],i,0);
-        gridLayout->addWidget(Value[i],i,1);
-        gridLayout->addWidget(MaxValue[i],i,2);
+//        parVector();
+
+
+        gridLayout->addWidget(parameter[i],i,0);
+        gridLayout->addWidget(MinValue[i],i,1);
+        gridLayout->addWidget(Value[i],i,2);
+        gridLayout->addWidget(MaxValue[i],i,3);
     }
 }
+
+//void GeneralParametersTab::parVector() {
+//    QList<QLabel*> parameter;
+//    parameter.push_back("boc1");
+//    parameter.push_back("boc2");
+//}
