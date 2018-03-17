@@ -7,26 +7,33 @@
 #include <QGridLayout>
 #include <QDoubleSpinBox>
 #include <QVector>
-#include <iostream>
 #include <QLabel>
 #include <QString>
+
+#include <string>
+#include <vector>
 
 class GeneralParametersTab : public QWidget
 {
     Q_OBJECT
 private:
-    //QGridLayout *gridLayout; //Moet deze hier staan of in mainwindow.h?
-    QVector<QDoubleSpinBox*> MinValue;
-    QVector<QDoubleSpinBox*> Value;
-    QVector<QDoubleSpinBox*> MaxValue;
-    QList<QLabel*> parameter; // waarom moet die * erachter?
+    QVector<QDoubleSpinBox*> MinValue;  //!< pointers to lower bounds
+    QVector<QDoubleSpinBox*> Value;     //!< pointers to initial values
+    QVector<QDoubleSpinBox*> MaxValue;  //!< pointers to upper bounds
+    QVector<QLabel*> labels;            //!< vector holding pointers to QLabels
 
+    // add vector to hold checkbox pointers here
+
+    std::vector<std::string> label_names;           //!< vector holding label names
 
 public:
     explicit GeneralParametersTab(QWidget *parent = nullptr);
 
 private:
-        void parVector();
+        /*
+         * @brief   Store the names for the parameters in the label_names
+         */
+        void construct_label_names();
 signals:
 
 public slots:
