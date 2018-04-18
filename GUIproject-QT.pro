@@ -32,7 +32,8 @@ SOURCES += \
 HEADERS += \
         mainwindow.h \
     generalparameterstab.h \
-    atomicparameterstab.h
+    atomicparameterstab.h \
+    elementselectiontab.h
 
 FORMS += \
         mainwindow.ui
