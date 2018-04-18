@@ -6,6 +6,7 @@
 #include <QGroupBox>
 #include <QCheckBox>
 #include <QGridLayout>
+#include <QLabel>
 
 class ElementSelectionTab : public QWidget
 {

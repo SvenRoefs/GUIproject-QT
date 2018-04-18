@@ -8,12 +8,38 @@ ElementSelectionTab::ElementSelectionTab(QWidget *parent) : QWidget(parent)
 
     QGridLayout* grid_layout = new QGridLayout();
     this->elementbox = new QGroupBox();
-    this->elementbox->setTitle("Select element");
+    this->elementbox->setTitle("Select elements");
     this->elementbox->setLayout(grid_layout);
     this->elementbox->setCheckable(false);
     mainLayout->addWidget(this->elementbox);
 
-    // first row transition metals
+    // first period
+    this->checkboxes.push_back(new QCheckBox("H"));
+    this->checkboxes.push_back(new QCheckBox("He"));
+
+    //second period
+    this->checkboxes.push_back(new QCheckBox("Li"));
+    this->checkboxes.push_back(new QCheckBox("Be"));
+    this->checkboxes.push_back(new QCheckBox("B"));
+    this->checkboxes.push_back(new QCheckBox("C"));
+    this->checkboxes.push_back(new QCheckBox("N"));
+    this->checkboxes.push_back(new QCheckBox("O"));
+    this->checkboxes.push_back(new QCheckBox("F"));
+    this->checkboxes.push_back(new QCheckBox("Ne"));
+
+    //third period
+    this->checkboxes.push_back(new QCheckBox("Na"));
+    this->checkboxes.push_back(new QCheckBox("Mg"));
+    this->checkboxes.push_back(new QCheckBox("Al"));
+    this->checkboxes.push_back(new QCheckBox("Si"));
+    this->checkboxes.push_back(new QCheckBox("P"));
+    this->checkboxes.push_back(new QCheckBox("S"));
+    this->checkboxes.push_back(new QCheckBox("Cl"));
+    this->checkboxes.push_back(new QCheckBox("Ar"));
+
+    //fourth period (first row transition metals)
+    this->checkboxes.push_back(new QCheckBox("K"));
+    this->checkboxes.push_back(new QCheckBox("Ca"));
     this->checkboxes.push_back(new QCheckBox("Sc"));
     this->checkboxes.push_back(new QCheckBox("Ti"));
     this->checkboxes.push_back(new QCheckBox("V"));
@@ -24,8 +50,16 @@ ElementSelectionTab::ElementSelectionTab(QWidget *parent) : QWidget(parent)
     this->checkboxes.push_back(new QCheckBox("Ni"));
     this->checkboxes.push_back(new QCheckBox("Cu"));
     this->checkboxes.push_back(new QCheckBox("Zn"));
+    this->checkboxes.push_back(new QCheckBox("Ga"));
+    this->checkboxes.push_back(new QCheckBox("Ge"));
+    this->checkboxes.push_back(new QCheckBox("As"));
+    this->checkboxes.push_back(new QCheckBox("Se"));
+    this->checkboxes.push_back(new QCheckBox("Br"));
+    this->checkboxes.push_back(new QCheckBox("Kr"));
 
-    // second row transition metals
+    // fifth period (second row transition metals)
+    this->checkboxes.push_back(new QCheckBox("Rb"));
+    this->checkboxes.push_back(new QCheckBox("Sr"));
     this->checkboxes.push_back(new QCheckBox("Y"));
     this->checkboxes.push_back(new QCheckBox("Zr"));
     this->checkboxes.push_back(new QCheckBox("Nb"));
@@ -36,8 +70,31 @@ ElementSelectionTab::ElementSelectionTab(QWidget *parent) : QWidget(parent)
     this->checkboxes.push_back(new QCheckBox("Pd"));
     this->checkboxes.push_back(new QCheckBox("Ag"));
     this->checkboxes.push_back(new QCheckBox("Cd"));
+    this->checkboxes.push_back(new QCheckBox("In"));
+    this->checkboxes.push_back(new QCheckBox("Sn"));
+    this->checkboxes.push_back(new QCheckBox("Sb"));
+    this->checkboxes.push_back(new QCheckBox("Te"));
+    this->checkboxes.push_back(new QCheckBox("I"));
+    this->checkboxes.push_back(new QCheckBox("Xe"));
 
-    // third row transition metals
+    // sixth period (third row transition metals) including lanthanides
+    this->checkboxes.push_back(new QCheckBox("Cs"));
+    this->checkboxes.push_back(new QCheckBox("Ba"));
+    this->checkboxes.push_back(new QCheckBox("La"));
+    this->checkboxes.push_back(new QCheckBox("Ce"));
+    this->checkboxes.push_back(new QCheckBox("Pr"));
+    this->checkboxes.push_back(new QCheckBox("Nd"));
+    this->checkboxes.push_back(new QCheckBox("Pm"));
+    this->checkboxes.push_back(new QCheckBox("Sm"));
+    this->checkboxes.push_back(new QCheckBox("Eu"));
+    this->checkboxes.push_back(new QCheckBox("Gd"));
+    this->checkboxes.push_back(new QCheckBox("Tb"));
+    this->checkboxes.push_back(new QCheckBox("Dy"));
+    this->checkboxes.push_back(new QCheckBox("Ho"));
+    this->checkboxes.push_back(new QCheckBox("Er"));
+    this->checkboxes.push_back(new QCheckBox("Tm"));
+    this->checkboxes.push_back(new QCheckBox("Yb"));
+    this->checkboxes.push_back(new QCheckBox("Lu"));
     this->checkboxes.push_back(new QCheckBox("Hf"));
     this->checkboxes.push_back(new QCheckBox("Ta"));
     this->checkboxes.push_back(new QCheckBox("W"));
@@ -47,17 +104,47 @@ ElementSelectionTab::ElementSelectionTab(QWidget *parent) : QWidget(parent)
     this->checkboxes.push_back(new QCheckBox("Pt"));
     this->checkboxes.push_back(new QCheckBox("Au"));
     this->checkboxes.push_back(new QCheckBox("Hg"));
+    this->checkboxes.push_back(new QCheckBox("Tl"));
+    this->checkboxes.push_back(new QCheckBox("Pb"));
+    this->checkboxes.push_back(new QCheckBox("Bi"));
+    this->checkboxes.push_back(new QCheckBox("Po"));
+    this->checkboxes.push_back(new QCheckBox("At"));
+    this->checkboxes.push_back(new QCheckBox("Rn"));
 
-    for(unsigned int i=0; i<10; i++) {
-        grid_layout->addWidget(this->checkboxes[i], 0, i);
+
+    //Setting Layout of periodic table to customary format
+   // first period
+    grid_layout->addWidget(this->checkboxes[0], 0, 0);
+    grid_layout->addWidget(this->checkboxes[1], 0, 17);
+
+    // second period
+    grid_layout->addWidget(this->checkboxes[2], 1, 0);
+    grid_layout->addWidget(this->checkboxes[3], 1, 1);
+    for(unsigned int i=4; i<10; i++) {
+        grid_layout->addWidget(this->checkboxes[i], 1, i+8);
     }
 
-    for(unsigned int i=10; i<20; i++) {
-        grid_layout->addWidget(this->checkboxes[i], 1, i-10);
+    // third period
+    grid_layout->addWidget(this->checkboxes[10], 2, 0);
+    grid_layout->addWidget(this->checkboxes[11], 2, 1);
+    for(unsigned int i=12; i<18; i++) {
+        grid_layout->addWidget(this->checkboxes[i], 2, i);
     }
 
-    for(unsigned int i=20; i<29; i++) {
-        grid_layout->addWidget(this->checkboxes[i], 2, i-19);
+    // fourth period
+        for(unsigned int i=18; i<36; i++) {
+        grid_layout->addWidget(this->checkboxes[i], 3, i-18);
+    }
+
+    // fourth period
+         for(unsigned int i=36; i<54; i++) {
+         grid_layout->addWidget(this->checkboxes[i], 4, i-36);
+    }
+
+    grid_layout->addWidget(this->checkboxes[54], 5, 0);
+    grid_layout->addWidget(this->checkboxes[55], 5, 1);
+    for(unsigned int i=71; i<86; i++) {
+        grid_layout->addWidget(this->checkboxes[i], 5, i-68);
     }
 }
 
