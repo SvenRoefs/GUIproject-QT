@@ -64,6 +64,7 @@ GeneralParametersTab::GeneralParametersTab(QWidget *parent) : QWidget(parent)
         this->MinValue.push_back(new QDoubleSpinBox());
         this->Value.push_back(new QDoubleSpinBox());
         this->MaxValue.push_back(new QDoubleSpinBox());
+        this->Checkbox.push_back(new QCheckBox());
 
         // note that I use here "i+1" because the first row has been used for the column headers
         gridLayout->addWidget(number_label,i+1,0);
@@ -71,6 +72,7 @@ GeneralParametersTab::GeneralParametersTab(QWidget *parent) : QWidget(parent)
         gridLayout->addWidget(MinValue[i],i+1,2);
         gridLayout->addWidget(Value[i],i+1,3);
         gridLayout->addWidget(MaxValue[i],i+1,4);
+        gridLayout->addWidget(Checkbox[i],i+1,5,1,1,Qt::AlignJustify);
 
         // add check boxes here
     }
