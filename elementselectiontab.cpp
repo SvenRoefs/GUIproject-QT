@@ -111,6 +111,39 @@ ElementSelectionTab::ElementSelectionTab(QWidget *parent) : QWidget(parent)
     this->checkboxes.push_back(new QCheckBox("At"));
     this->checkboxes.push_back(new QCheckBox("Rn"));
 
+    // seventh period (fourth row transition metals) including lanthanides
+    this->checkboxes.push_back(new QCheckBox("Fr"));
+    this->checkboxes.push_back(new QCheckBox("Ra"));
+    this->checkboxes.push_back(new QCheckBox("Ac"));
+    this->checkboxes.push_back(new QCheckBox("Th"));
+    this->checkboxes.push_back(new QCheckBox("Pa"));
+    this->checkboxes.push_back(new QCheckBox("U"));
+    this->checkboxes.push_back(new QCheckBox("Np"));
+    this->checkboxes.push_back(new QCheckBox("Pu"));
+    this->checkboxes.push_back(new QCheckBox("Am"));
+    this->checkboxes.push_back(new QCheckBox("Cm"));
+    this->checkboxes.push_back(new QCheckBox("Bk"));
+    this->checkboxes.push_back(new QCheckBox("Cf"));
+    this->checkboxes.push_back(new QCheckBox("Es"));
+    this->checkboxes.push_back(new QCheckBox("Fm"));
+    this->checkboxes.push_back(new QCheckBox("Md"));
+    this->checkboxes.push_back(new QCheckBox("No"));
+    this->checkboxes.push_back(new QCheckBox("Lr"));
+    this->checkboxes.push_back(new QCheckBox("Rf"));
+    this->checkboxes.push_back(new QCheckBox("Db"));
+    this->checkboxes.push_back(new QCheckBox("Sg"));
+    this->checkboxes.push_back(new QCheckBox("Bh"));
+    this->checkboxes.push_back(new QCheckBox("Hs"));
+    this->checkboxes.push_back(new QCheckBox("Mt"));
+    this->checkboxes.push_back(new QCheckBox("Ds"));
+    this->checkboxes.push_back(new QCheckBox("Rg"));
+    this->checkboxes.push_back(new QCheckBox("Cn"));
+    this->checkboxes.push_back(new QCheckBox("Nh"));
+    this->checkboxes.push_back(new QCheckBox("Fl"));
+    this->checkboxes.push_back(new QCheckBox("Mc"));
+    this->checkboxes.push_back(new QCheckBox("Lv"));
+    this->checkboxes.push_back(new QCheckBox("Ts"));
+    this->checkboxes.push_back(new QCheckBox("Og"));
 
     //Setting Layout of periodic table to customary format
    // first period
@@ -136,15 +169,33 @@ ElementSelectionTab::ElementSelectionTab(QWidget *parent) : QWidget(parent)
         grid_layout->addWidget(this->checkboxes[i], 3, i-18);
     }
 
-    // fourth period
+    // fifth period
          for(unsigned int i=36; i<54; i++) {
          grid_layout->addWidget(this->checkboxes[i], 4, i-36);
     }
 
+    //sixth period
     grid_layout->addWidget(this->checkboxes[54], 5, 0);
     grid_layout->addWidget(this->checkboxes[55], 5, 1);
     for(unsigned int i=71; i<86; i++) {
         grid_layout->addWidget(this->checkboxes[i], 5, i-68);
+    }
+
+    // seventh period
+    grid_layout->addWidget(this->checkboxes[86], 6, 0);
+    grid_layout->addWidget(this->checkboxes[87], 6, 1);
+    for(unsigned int i=103; i<118; i++) {
+        grid_layout->addWidget(this->checkboxes[i], 6, i-100);
+    }
+
+    // Sixth period lanthanides
+    for(unsigned int i=56; i<71; i++) {
+        grid_layout->addWidget(this->checkboxes[i], 7, i-53);
+    }
+
+    // Seventh period lanthanides
+    for(unsigned int i=88; i<103; i++) {
+        grid_layout->addWidget(this->checkboxes[i], 8, i-85);
     }
 }
 
