@@ -27,7 +27,8 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     generalparameterstab.cpp \
-    atomicparameterstab.cpp
+    atomicparameterstab.cpp \
+    elementselectiontab.cpp
 
 HEADERS += \
         mainwindow.h \

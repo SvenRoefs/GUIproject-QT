@@ -6,6 +6,7 @@
 #include <QLabel>
 #include <QTabWidget>
 
+#include "elementselectiontab.h"
 #include "generalparameterstab.h"
 #include "atomicparameterstab.h"
 
