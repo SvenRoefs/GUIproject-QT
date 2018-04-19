@@ -65,8 +65,10 @@ void MainWindow::create_menus() {
 
 void MainWindow::create_tabs() {
     this->tabs = new QTabWidget();
+    this->element_selection_tab = new ElementSelectionTab();
     this->general_parameters_tab = new GeneralParametersTab();
     this->atomic_parameters_tab = new AtomicParametersTab();
+    this->tabs->addTab(this->element_selection_tab, tr("Element selection"));
     this->tabs->addTab(this->general_parameters_tab, tr("General parameters"));
     this->tabs->addTab(this->atomic_parameters_tab, tr("Atomic parameters"));
 }

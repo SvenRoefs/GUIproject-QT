@@ -6,6 +6,7 @@
 #include <QLabel>
 #include <QTabWidget>
 
+#include "elementselectiontab.h"
 #include "generalparameterstab.h"
 #include "atomicparameterstab.h"
 
@@ -26,6 +27,7 @@ private:
     QAction *exitAct;
 
     QTabWidget *tabs;
+    ElementSelectionTab *element_selection_tab;
     GeneralParametersTab *general_parameters_tab;
     AtomicParametersTab *atomic_parameters_tab;
 
