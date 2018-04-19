@@ -111,3 +111,10 @@ void AtomicParametersTab::construct_label_names() {
     this->label_names.push_back("ecore2");
     this->label_names.push_back("acore2");
 }
+
+//Retrieve number of selected elements and print them in output to check if done correctly
+void AtomicParametersTab::set_number_elements(int num){
+    number_elements = num;
+    std::cout<< "Number of selected elements = " << num << std::endl;
+    //    this->number_elements = num;
+}

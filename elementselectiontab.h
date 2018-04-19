@@ -19,6 +19,7 @@ public:
     explicit ElementSelectionTab(QWidget *parent = 0);
 
     QString get_selected_element() const;
+    int get_number_selected_elements();
 };
 
 #endif // ELEMENTSELECTIONTAB_H

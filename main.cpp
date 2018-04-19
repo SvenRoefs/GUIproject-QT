@@ -1,3 +1,11 @@
+/*
+Authors:    Sven Roefs
+            Ivo Filot
+            Emiel Hensen
+
+(C) Copyright 2018 Inorganic Materials Chemistry
+*/
+
 #include "mainwindow.h"
 #include <QApplication>
 
