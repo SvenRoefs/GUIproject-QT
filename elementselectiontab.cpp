@@ -199,6 +199,7 @@ ElementSelectionTab::ElementSelectionTab(QWidget *parent) : QWidget(parent)
     }
 }
 
+//Store values of checked checkboxes
 QString ElementSelectionTab::get_selected_element() const {
     for(unsigned int i=0; i<this->checkboxes.size(); i++) {
         if(this->checkboxes[i]->isChecked()) {
@@ -207,4 +208,17 @@ QString ElementSelectionTab::get_selected_element() const {
     }
 
     return "X";
+}
+
+//Count number of checkboxes selected
+int ElementSelectionTab::get_number_selected_elements(){
+   int number_elements = 0;
+    for(unsigned int i=0; i<this->checkboxes.size(); i++) {
+        if(this->checkboxes[i]->isChecked()) {
+            int number_elements = number_elements + 1;
+        }
+//    int number_elements = this->checkboxes.size();
+//    return number_elements;
+}
+                return number_elements;
 }

@@ -71,6 +71,8 @@ void MainWindow::create_tabs() {
     this->tabs->addTab(this->element_selection_tab, tr("Element selection"));
     this->tabs->addTab(this->general_parameters_tab, tr("General parameters"));
     this->tabs->addTab(this->atomic_parameters_tab, tr("Atomic parameters"));
+
+    this->atomic_parameters_tab->set_number_elements(this->element_selection_tab->get_number_selected_elements()); //Get number of selected elements from selection tab and give to atomic parameters tab
 }
 
 /*
