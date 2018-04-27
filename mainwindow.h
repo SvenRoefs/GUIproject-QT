@@ -9,6 +9,11 @@
 #include "elementselectiontab.h"
 #include "generalparameterstab.h"
 #include "atomicparameterstab.h"
+#include "twobodyparameterstab.h"
+#include "offdiagonalparameters.h"
+#include "valenceangleparameters.h"
+#include "torsionangleparameters.h"
+#include "hydrogenbondparameterstab.h"
 
 class MainWindow : public QMainWindow
 {
@@ -30,6 +35,11 @@ private:
     ElementSelectionTab *element_selection_tab;
     GeneralParametersTab *general_parameters_tab;
     AtomicParametersTab *atomic_parameters_tab;
+    TwoBodyParametersTab *two_body_parameters_tab;
+    OffDiagonalParametersTab *off_diagonal_parameters_tab;
+    ValenceAngleParametersTab *valence_angle_parameters_tab;
+    TorsionAngleParametersTab *torsion_angle_parameters_tab;
+    HydrogenBondParametersTab *hydrogen_bond_parameters_tab;
 
 
 public:

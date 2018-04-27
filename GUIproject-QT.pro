@@ -28,13 +28,23 @@ SOURCES += \
         mainwindow.cpp \
     generalparameterstab.cpp \
     atomicparameterstab.cpp \
-    elementselectiontab.cpp
+    elementselectiontab.cpp \
+    twobodyparameterstab.cpp \
+    offdiagonalparameters.cpp \
+    valenceangleparameters.cpp \
+    torsionangleparameters.cpp \
+    hydrogenbondparameterstab.cpp
 
 HEADERS += \
         mainwindow.h \
     generalparameterstab.h \
     atomicparameterstab.h \
-    elementselectiontab.h
+    elementselectiontab.h \
+    twobodyparameterstab.h \
+    offdiagonalparameters.h \
+    valenceangleparameters.h \
+    torsionangleparameters.h \
+    hydrogenbondparameterstab.h
 
 FORMS += \
         mainwindow.ui

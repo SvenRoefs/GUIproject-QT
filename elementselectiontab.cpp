@@ -197,6 +197,11 @@ ElementSelectionTab::ElementSelectionTab(QWidget *parent) : QWidget(parent)
     for(unsigned int i=88; i<103; i++) {
         grid_layout->addWidget(this->checkboxes[i], 8, i-85);
     }
+
+    // Create button to confirm selected elements
+    selectbutton = new QPushButton("Select elements",this);
+    grid_layout->addWidget(this->selectbutton, 9,8,1,2);
+
 }
 
 //Store values of checked checkboxes
