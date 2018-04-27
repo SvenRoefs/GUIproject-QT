@@ -7,6 +7,7 @@
 #include <QCheckBox>
 #include <QGridLayout>
 #include <QLabel>
+#include <QPushButton>
 
 class ElementSelectionTab : public QWidget
 {
@@ -14,6 +15,7 @@ class ElementSelectionTab : public QWidget
 private:
     QGroupBox* elementbox;
     std::vector<QCheckBox*> checkboxes;
+    QPushButton *selectbutton;
 
 public:
     explicit ElementSelectionTab(QWidget *parent = 0);
