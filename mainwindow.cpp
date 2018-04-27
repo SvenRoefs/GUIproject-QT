@@ -68,9 +68,19 @@ void MainWindow::create_tabs() {
     this->element_selection_tab = new ElementSelectionTab();
     this->general_parameters_tab = new GeneralParametersTab();
     this->atomic_parameters_tab = new AtomicParametersTab();
+    this->two_body_parameters_tab = new TwoBodyParametersTab();
+    this->off_diagonal_parameters_tab = new OffDiagonalParametersTab();
+    this->valence_angle_parameters_tab = new ValenceAngleParametersTab();
+    this->torsion_angle_parameters_tab = new TorsionAngleParametersTab();
+    this->hydrogen_bond_parameters_tab = new HydrogenBondParametersTab();
     this->tabs->addTab(this->element_selection_tab, tr("Element selection"));
     this->tabs->addTab(this->general_parameters_tab, tr("General parameters"));
     this->tabs->addTab(this->atomic_parameters_tab, tr("Atomic parameters"));
+    this->tabs->addTab(this->two_body_parameters_tab, tr("Two body parameters"));
+    this->tabs->addTab(this->off_diagonal_parameters_tab, tr("Off diagonal parameters"));
+    this->tabs->addTab(this->valence_angle_parameters_tab, tr("Valence angle parameters"));
+    this->tabs->addTab(this->torsion_angle_parameters_tab, tr("Torsion angle parameters"));
+    this->tabs->addTab(this->hydrogen_bond_parameters_tab, tr("Hydrogen bond parameters"));
 
     this->atomic_parameters_tab->set_number_elements(this->element_selection_tab->get_number_selected_elements()); //Get number of selected elements from selection tab and give to atomic parameters tab
 }
